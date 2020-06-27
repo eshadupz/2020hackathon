@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+
+  <title>Learn English</title>
+
+
+  <div class="topnav">
+    <nav id="nav">
+      <ul>
+        <li><a href="{{ url_for('index')}}">home</a></li>
+        <li> <a href="{{ url_for('dashboard')}}">dashboard</a></li>
+        <li> <a href="{{ url_for('register')}}">sign up</a></li>
+        <li> <a href="{{ url_for('login')}}">login</a></li>
+
+      </ul>
+    </nav>
+  </div>
+
+
+</head>
+
+<body>
+
+  <div class="hometop">
+
+    <div class="homecontent">
+      <h1>Welcome. Let's Learn English!</h1>
+
+          <div class="btn">
+          <button onclick="window.location.href='/register';">Get Started</button>
+          </div>
+
+   </div>
+
+   <div class=treeicon>
+
+  </div>
+  </div>
+
+  <div class="homebottom">
+    <h1>Practice writing and speaking.</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et porttitor tellus, id fringilla neque. Nullam aliquet efficitur libero, at fringilla nulla cursus sit amet. Nam efficitur ante tellus, id dignissim arcu scelerisque a. Aliquam nec quam et enim fermentum tempor. Mauris porttitor eleifend cursus. Mauris sed volutpat leo. Morbi porta quam nec lorem posuere consectetur. Donec viverra nisl eu pellentesque sagittis.</p>
+  </div>
+
+
+
+</body>
+
+</html>

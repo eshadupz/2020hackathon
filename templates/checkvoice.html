@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}" />
+
+  <script type="text/javascript">
+    function record(){
+      var recognition = new webkitSpeechRecognition();
+      recognition.lang = "en-GB";
+
+      recognition.onresult = function(event){
+        console.log(event);
+        document.getElementById('speechToText').value = event.results[0][0].transcript;
+      }
+
+      recognition.start();
+    }
+  </script>
+  <title>Learn English</title>
+
+  <nav id="nav">
+    <ul>
+      <li><a href="{{ url_for('index')}}">home</a></li>
+      <li> <a href="{{ url_for('dashboard')}}">dashboard</a></li>
+      <li> <a href="{{ url_for('register')}}">sign up</a></li>
+      <li> <a href="{{ url_for('login')}}">login</a></li>
+
+    </ul>
+  </nav>
+</head>
+
+<body>
+
+  <div class="pointheader">
+    <ul>
+      <li>points: {{ points }}</li>
+      <li>correct: </li>
+      <li>incorrect: </li>
+
+    </ul>
+  </div>
+
+  <div class="game">
+    <h1>Repeat the word.</h1>
+
+    <h2>{{ word }}</h2>
+
+  <div class="voice">
+
+
+
+    <input type="text" name="speak" id="speechToText" placeholder="click here to speak" onclick=record() >
+    <button onclick="window.location.href='/checkvoice';">Submit</button>
+
+  </div>
+
+
+
+</body>
+</html>
