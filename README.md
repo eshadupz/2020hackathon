@@ -1,3 +1,1 @@
-# Project 1
-
-Web Programming with Python and JavaScript
+Hack-ED Education Hackathon 2020
