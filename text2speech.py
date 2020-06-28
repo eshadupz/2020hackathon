@@ -1,0 +1,16 @@
+from gtts import gTTS
+
+text2speech = gTTS(text="Dog", lang='en')
+text2speech.save('dog.mp3')
+text2speech = gTTS(text="Pigs", lang='en')
+text2speech.save('pigs.mp3')
+text2speech = gTTS(text="Book", lang='en')
+text2speech.save('book.mp3')
+text2speech = gTTS(text="table", lang='en')
+text2speech.save('table.mp3')
+text2speech = gTTS(text="chair", lang='en')
+text2speech.save('chair.mp3')
+text2speech = gTTS(text="the quick brown fox jumps over the lazy dog", lang='en')
+text2speech.save('quickfoxsen.mp3')
+text2speech = gTTS(text="I can jump!", lang='en')
+text2speech.save('jumpsen.mp3')
