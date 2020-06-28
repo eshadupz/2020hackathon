@@ -9,7 +9,8 @@
 
   <title>Learn English</title>
 
-  <nav id="nav">
+<div class="specialnav">
+  <nav id="nav" >
     <ul>
       <li><a href="{{ url_for('index')}}">home</a></li>
       <li> <a href="{{ url_for('dashboard')}}">dashboard</a></li>
@@ -18,19 +19,69 @@
 
     </ul>
   </nav>
+</div>
 
 
 </head>
 
 <body>
 
+
+  <div class=top>
+  </div>
+
   <div class="dashboardtop">
-    <button onclick="window.location.href='/start';">Start Learning</button>
+
+      <h2>My Dashboard  </h2>
+
 
 
    </div>
 
 
+
+
+
+<div class="dashboard">
+
+
+   <div class="cards">
+
+   <div class="row">
+
+
+
+       <div class="content2" id="one">
+           <h2>MY POINTS</h2>
+               <h4><img src="https://img.icons8.com/color/48/000000/turtle.png"/></h4>
+           <p><img src="https://img.icons8.com/fluent/48/000000/trophy.png"/> </p>
+
+
+       </div>
+
+
+       <div class="content2"  id="two">
+           <h2>START LEARNING</h2>
+
+
+
+        <div id="outer">
+          <div class="inner"><button class="msgBtn" onclick="window.location.href='/start';" >Practice Spelling</button></div>
+          <div class="inner"><button class="msgBtn" onclick="window.location.href='/sentence';"  >Practice Sentences</button></div>
+          <div class="inner"><button class="msgBtn" onclick="window.location.href='/grammar';" >Practice Grammar</button></div>
+
+        </div>
+
+       </div>
+
+
+
+
+
+
+
+
+<div>
 
 
 

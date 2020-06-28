@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
 
 * {
     font-family: 'Balsamiq Sans', cursive;
@@ -14,53 +15,92 @@ nav ul {
     display: flex;
     padding-top: 0;
     list-style-type: none;
-    background-color: #1f4391;
+    /*background-color: #266599;*/
+    background-color: white;
     margin-bottom: 0px;
     padding-left: 950px;
 
 }
 
 nav ul li a {
-    color: white;
+    color: #56595c;
     text-decoration: none;
     display: block;
     width: 100%;
     padding: 2em 2em;
     font-family: sans-serif;
-    color: white;
+
 
 }
 
 nav li a:hover{
   text-decoration: none;
-  color: white;
+  color: #56595c;
   font-weight: bold;
+}
+
+.specialnav ul{
+  background-color: white;
+}
+
+.specialnav ul li a{
+  color: #56595c;
+}
+
+.specialnav2 ul{
+  background-color: #2daded;
+}
+
+.specialnav2 ul li a{
+  color: white;
 }
 
 
 .hometop{
-  background: linear-gradient(to bottom, #1f4391,#2f6ba3);
+  background: linear-gradient(to bottom, white,#5db1e8);
+/*  background-image: url("https://i.pinimg.com/236x/93/4d/c0/934dc09569ec79e8e39d9b4b339bedb7.jpg");*/
+  background-repeat: no-repeat;
+  background-size: cover;
 
 }
 
 .homecontent{
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
   text-align: right;
   padding-top: 250px;
-  padding-bottom: 200px;
-  padding-right: 100px;
-  color: white;
+  padding-bottom: 320px;
+  padding-right: 380px;
+  color: #56595c;
+  letter-spacing: 2px;
+  font-weight: bold;
 }
 
 
 .btn button{
-  background-color: #6cde33;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+
   border-radius: 12px;
   width: 150px;
   border: none;
   height: 60px;
   font-size: 20px;
-  margin-right: 150px;
+  margin-right: 200px;
   color: white;
+
+
+  margin-top: 20px;
+
+  background-color: #b0b3b5;
+  border: none;
+
+  width: 200px;
+}
+
+.btn button:hover{
+  background-color: black;
+
 }
 
 .treeicon{
@@ -69,6 +109,8 @@ nav li a:hover{
 }
 
 .homebottom h1, p{
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
   color: #56595c;
   padding-left: 150px;
   padding-top: 100px;
@@ -81,54 +123,280 @@ nav li a:hover{
 
 }
 
-.homebottom h1{
-  text-decoration: underline;
 
-}
 
 
 
 /* Register.html */
 .registertop{
-  background-color: white;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
   text-align: center;
   padding-top: 50px;
   color:#56595c;
+  background-color: white;
+  margin-left: 400px;
+  margin-right: 400px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 
 }
+
 
 .registertop li{
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
   list-style-type: none;
-}
-
-.registertop input{
-  width: 40%;
-  margin-top: 20px;
-  border-radius: 12px;
-  border-color: #56595c;
+  color: #f0f0f0;
   padding: 8px;
 }
 
-.registertop button{
-  margin-left: 160px;
+.registertop input{
+  width: 50%;
+  height: 50px;
   margin-top: 20px;
+  border-radius: 14px;
+  border-color: #f0f0f0;
+  padding: 8px;
+  background-color: #f5f5f5;
+  border-style: solid;
 }
 
+.registertop button{
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+
+  margin-top: 20px;
+
+  background-color: #2daded;
+  border-style: inset;
+  font-size: 18px;
+  width: 300px;
+}
+
+.registertop button:focus {
+  outline:0;
+
+}
+
+.registertop h2{
+  font-weight: bold;
+}
 /* dashboard.html */
-.dashboardtop{
-  color:#56595c;
+
+.dashboardtop {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+
 }
 
-.dashboardtop button{
-  background-color: #6cde33;
+
+
+.top{
+  background-color: white;
+}
+
+.dashboard{
+    background-color:#e3e3e3;
+    padding-bottom: 50px;
+}
+
+.dashboardtop{
+  background-image: url("https://hdwallsource.com/img/2014/6/magenta-wallpaper-29053-29770-hd-wallpapers.jpg");
+}
+
+.dashboardtop image{
+  width: 100%
+  padding: 50px;
+  margin-right: 300px;
+
+}
+
+.dashboardtop h3{
+  color: white;
+
+  display: inline-block;
+  padding-left: 40px;
+  font-size: 25px;
+}
+
+.dashboardtop h2{
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 50px;
+  display: inline-block;
+  padding-left: 630px;
+  padding-bottom: 50px;
+
+}
+.dashboard button{
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  background-color: #c9264f;
   border-radius: 12px;
-  width: 150px;
+  width: 180px;
   border: none;
-  height: 60px;
+  height: 80px;
+  color: white;
   font-size: 20px;
+
+}
+
+
+
+
+.content2 p{
+  font-family: 'Montserrat', sans-serif;
+
+  font-size: 17px;
+
   margin-right: 150px;
+
+}
+
+#one p{
+  margin-bottom: 150px;
+}
+
+#one h2::after{
+  content: '';
+  background: #737373;
+  display: block;
+  height: 3px;
+  width: 170px;
+  margin: 20px auto 5px;
+}
+
+#two h2::after{
+  content: '';
+  background: #737373;
+  display: block;
+  height: 3px;
+  width: 170px;
+  margin: 20px auto 5px;
+}
+
+#one img:hover{
+  border: 2px solid #56595c;;
+}
+
+.content2{
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+
+  margin: 20px;
+
+
+  border-radius: 4px;
+  justify-content: center;
+  background-color: white;
+
+}
+
+
+.content2:hover{
+
+ box-shadow: 5px 10px 18px #888888;
+}
+
+.content2 h2{
+  font-size: 30px;
+  margin-top: 40px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+#one {
+    width: 300px;
+    float: left;
+    height: 300px;
+    margin-left: 200px;
+
+
+}
+#two {
+    width: 700px;
+    float: left;
+    height: 400px;
+
+}
+
+#two h2{
+  margin-left: 80px;
+  margin-right: 70px;
+}
+
+#one h4{
+  padding: 0px;
+  margin-top: 10px;
+  margin-right: 20px;
+}
+
+#one p{
+  padding: 0px;
+  margin-top: 10px;
+  margin-left: 120px;
+
+}
+
+#button3{
+  margin-bottom: 100px;
+}
+
+
+
+#button1{
   margin-top: 50px;
-  margin-left: 50px;
+  margin-right: 250px;
+  margin-left: 30px;
+  height:400px;
+  margin-bottom: 30px;
+}
+
+#button1 button{
+  height: 300px;
+  width: 200px;
+
+}
+#button2{
+    margin-top: 50px;
+    margin-right: 20px;
+    height:400px;
+    margin-bottom: 30px;
+}
+
+#button2 button{
+  height: 300px;
+  width: 200px;
+
+}
+
+
+
+.inner button:hover{
+  border-style: solid;
+  background-color: #93c94d;
+}
+
+#one img{
+   width:80px;
+   height: 70px;
+   margin-left: 30px;
+
+}
+
+#outer
+{
+    width:100%;
+    text-align: center;
+}
+.inner
+{
+    display: inline-block;
 }
 
 /* game.html */
@@ -136,6 +404,7 @@ nav li a:hover{
   text-align: center;
   color: #56595c;
   margin: 50px;
+
 }
 
 .game h2{
@@ -156,6 +425,12 @@ nav li a:hover{
 
 }
 
+.wordform input{
+  height: 80px;
+  width: 300px;
+  font-size: 30px;
+}
+
 
 .wordform button{
   margin-top: 50px;
@@ -168,11 +443,32 @@ nav li a:hover{
 
 /* checkvoice.html */
 .voice{
-  padding-left: 600px;
+  padding-left: 570px;
   font-size: 26px;
 }
 
+
+#printthis{
+  color: #2fb52d;
+}
+
+.pointheader h2{
+  text-align: right;
+  padding-right: 100px;
+  padding-top: 30px;
+  font-size: 25px;
+  color:#56595c;
+}
+
+.voice input{
+  height: 80px;
+  width: 300px;
+  letter-spacing: 2px;
+
+}
+
 .voice button{
+  margin-top: 20px;
   background-color: #6cde33;
   border-radius: 12px;
   width: 150px;
@@ -180,6 +476,37 @@ nav li a:hover{
   height: 60px;
   font-size: 20px;
   margin-right: 150px;
-  margin-top: 50px;
   margin-left: 50px;
+
+}
+
+.message button{
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  margin-top: 20px;
+  background-color: #6cde33;
+  border-radius: 12px;
+  width: 150px;
+  border: none;
+  height: 60px;
+  font-size: 20px;
+  margin-right: 150px;
+  margin-left: 650px;
+  color: white;
+}
+
+.message h1{
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  text-align: center;
+  color: #56595c;
+  margin: 50px;
+}
+
+.game button{
+
+  background-color: #6cde33;
+  border: none;
+  padding: 5px;
+  color: white;
 }

@@ -1,7 +1,7 @@
 import os, json
 
 
-from flask import Flask, session, render_template, request, redirect, url_for
+from flask import Flask, session, render_template, request, redirect, url_for, flash
 from flask_session import Session
 from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
@@ -21,11 +21,12 @@ app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 
 
+
 engine = create_engine(os.getenv("DATABASE_URL"))
 db = scoped_session(sessionmaker(bind=engine))
 
 
-app=Flask(__name__)
+app.static_folder = 'static'
 
 @app.route("/register", methods=["GET","POST"])
 def register():
@@ -58,8 +59,9 @@ def login():
                 if checkpass is not None:
 
                     #return render_template("success.html", printthis = "You are logged in", name = p_username)
+                    app.config["SECRET_KEY"]="secretkey"
                     session["USERNAME"]= p_username
-                    return render_template("search.html")
+                    return render_template("dashboard.html")
 
 
                 else:
@@ -87,13 +89,19 @@ def dashboard():
     return render_template("dashboard.html")
 
 
+wordlist=["dog", "cat", "run"]
 
-getword = db.execute("SELECT word FROM words").fetchone()
+for i in wordlist:
+    getword = i
+
+globalvar = getword
+
 
 @app.route("/start", methods=["GET","POST"])
 def start():
 
     if request.method=="GET":
+
 
         word = request.form.get("word")
 
@@ -103,15 +111,121 @@ def start():
 
 
     else:
+
         word = request.form.get("word")
+
+
         if word==getword:
-            return render_template("message.html", message="Good job!")
-            return redirect(url_for('checkvoice'))
+                message="Great job!"
+                #return redirect(url_for('start'))
+                return render_template("checkvoice.html", message=message, points="1")
         else:
-        #    return render_template("message.html", message="Incorrect.")
-            return redirect(url_for('checkvoice'))
+                message="Sorry, incorrect."
+                #return redirect(url_for('start'))
+                return render_template("checkvoice.html", message=message, points="2")
+
 
 @app.route("/checkvoice", methods=["GET","POST"])
 def checkvoice():
-    return render_template("checkvoice.html")
-    speak = request.form.get("speak")
+
+
+
+    if request.method=="POST":
+        speak = request.form.get("speak")
+
+        return render_template("checkvoice.html")
+
+
+
+    else:
+        speak = request.form.get("speak")
+
+
+        if str(speak)==globalvar:
+
+
+            return redirect(url_for("start2"))
+        else:
+
+
+
+            return redirect(url_for("start3"))
+
+
+
+
+
+
+@app.route("/start2", methods=["GET","POST"])
+def start2():
+
+    if request.method=="GET":
+
+
+        word = request.form.get("word")
+        getword = "mouse"
+
+
+        return render_template("game.html", word=getword, points="2")
+
+
+
+    else:
+        return redirect(url_for("start3"))
+        message="Sorry, incorrect."
+        return render_template("message.html", printthis=message)
+
+
+
+
+@app.route("/start3", methods=["GET","POST"])
+def start3():
+
+    if request.method=="GET":
+
+
+        word = request.form.get("word")
+        getword = "book"
+
+
+        return render_template("game.html", word=getword, points="2")
+
+
+
+    else:
+
+        word = request.form.get("word")
+
+
+        if word=="book":
+            message=" job!"
+
+            return render_template("checkvoice.html", message=message, points= "2")
+        else:
+            message=" job!"
+
+            return render_template("checkvoice.html", message=message, points= "2")
+
+
+
+
+
+
+
+
+
+
+@app.route("/sentence", methods=["GET","POST"])
+def sentence():
+    sentence = "The quick brown fox jumps over the lazy dog"
+    return render_template("sentence.html", printthis=sentence)
+
+@app.route("/sentence2", methods=["GET","POST"])
+def sentence2():
+    sentence = "The dog chases the fat cat"
+    return render_template("sentence.html", printthis=sentence)
+
+
+@app.route("/grammar",  methods=["GET","POST"])
+def grammar():
+    return render_template("grammar.html")

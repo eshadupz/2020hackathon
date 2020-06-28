@@ -10,6 +10,7 @@
 
   <title>Learn English</title>
 
+<div class="specialnav2">
   <nav id="nav">
     <ul>
       <li><a href="{{ url_for('index')}}">home</a></li>
@@ -19,12 +20,16 @@
 
     </ul>
   </nav>
-  
+</div>
+
 </head>
 
 <body>
 
-<h1>{{ message }}</h1>
+  <div class="message">
+    <h1>{{ printthis }}</h1>
+    <button onclick="window.location.href='/start3';">Continue</button>
+    </div>
 
 </body>
 

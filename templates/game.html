@@ -10,33 +10,36 @@
 
   <title>Learn English</title>
 
-  <nav id="nav">
-    <ul>
-      <li><a href="{{ url_for('index')}}">home</a></li>
-      <li> <a href="{{ url_for('dashboard')}}">dashboard</a></li>
-      <li> <a href="{{ url_for('register')}}">sign up</a></li>
-      <li> <a href="{{ url_for('login')}}">login</a></li>
+  <div class="specialnav2">
+    <nav id="nav">
+      <ul>
+        <li><a href="{{ url_for('index')}}">home</a></li>
+        <li> <a href="{{ url_for('dashboard')}}">dashboard</a></li>
+        <li> <a href="{{ url_for('register')}}">sign up</a></li>
+        <li> <a href="{{ url_for('login')}}">login</a></li>
 
-    </ul>
-  </nav>
+      </ul>
+    </nav>
+  </div>
 </head>
+
 
 <body>
 
   <div class="pointheader">
-    <ul>
-      <li>points: {{ points }}</li>
-      <li>correct: </li>
-      <li>incorrect: </li>
-
-    </ul>
+    <h2>points: {{ points }}</h2>
   </div>
-
 
   <div class="game">
     <h1>Type out the word you see. <button style='font-size:24px'><i class='fas fa-volume-up'></i></button></h1>
 
     <h2>{{ word }}</h2>
+
+    <div id=printthis>
+    <h2>{{ printthis }}</h2>
+    </div>
+
+
 
     <div class="wordform">
       <form action="{{ url_for('start')}}" method="post">

@@ -9,6 +9,7 @@
 
   <title>Learn English</title>
 
+<div class="specialnav">
   <nav id="nav">
     <ul>
       <li><a href="{{ url_for('index')}}">home</a></li>
@@ -18,27 +19,25 @@
 
     </ul>
   </nav>
-
+</div>
 
 </head>
 
 <body>
 
   <div class="registertop">
-    <h2>LOGIN: </h2>
+    <h2>Login: </h2>
 
 
 
     <form action="{{ url_for('login')}}" method="post">
-        <li><input type="text" name="username" placeholder="Enter Your Username"></li>
-        <li><input type="text" name="password" placeholder="Enter Your Password"></li>
+        <li><input type="text" name="username" placeholder="username"></li>
+        <li><input type="password" name="password" placeholder="password"></li>
+
         <div class="btn">
-        <button>Submit</button>
+        <button>login</button>
         </div>
     </form>
-
-
-
 
 
 </body>

@@ -5,13 +5,12 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}" />
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 
   <title>Learn English</title>
 
-
-
-  <div class="topnav">
+  <div class="specialnav2">
     <nav id="nav">
       <ul>
         <li><a href="{{ url_for('index')}}">home</a></li>
@@ -22,36 +21,28 @@
       </ul>
     </nav>
   </div>
-
-
 </head>
+
 
 <body>
 
-  <div class="hometop">
 
-    <div class="homecontent">
-      <h1>Welcome. Let's Learn English! </h1>
+  <div class="game">
+    <h2>Read this sentence.</h2>
 
-          <div class="btn">
-          <button onclick="window.location.href='/register';">Get Started</button>
-          </div>
+    <h1>{{ printthis }}</h1>
 
-   </div>
+    <h2>Listen to the sentence. <button style='font-size:24px'><i class='fas fa-volume-up'></i></button></h2>
 
-   <div class=treeicon>
+    <div class="message">
 
-  </div>
-  </div>
+      <button onclick="window.location.href='/sentence2';">Continue</button>
+      </div>
 
-  <div class="homebottom">
-    <h1>LearningLeap</h1>
-    <p>Featuring instructional games and various reading materials (which we can add maybe), this website encourages young learners to practice their English!
-This website will make your child's learning experience fun and entertaining!</p>
+
   </div>
 
 
 
 </body>
-
 </html>
